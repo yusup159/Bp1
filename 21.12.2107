@@ -1,0 +1,75 @@
+*CLASS PROGRAM*
+package BP_21_12_2107
+
+class Hp {
+    var Nama : String =""
+    var Harga :Int =0
+    var Diskon :Double =0.0
+    var Total :Double= Harga-(Harga*Diskon)
+}
+*FUN MAIN*
+package BP_21_12_2107
+//Nama : Ahmad Yusup
+//NIM: 21.12.2107
+
+fun main(){
+    val Hp1=Hp()
+    Hp1.Nama="OPPO A52"
+    Hp1.Harga=2_999_000
+    Hp1.Diskon= 0.20
+    Hp1.Total=Hp1.Harga-(Hp1.Harga*Hp1.Diskon)
+
+    val Hp2=Hp()
+    Hp2.Nama="Redmi Note 9"
+    Hp2.Harga=2_099_000
+    Hp2.Diskon= 0.10
+    Hp2.Total=Hp2.Harga-(Hp2.Harga*Hp2.Diskon)
+
+    val Hp3=Hp()
+    Hp3.Nama="Realme C15"
+    Hp3.Harga=2_055_000
+    Hp3.Diskon= 0.15
+    Hp3.Total=Hp3.Harga-(Hp3.Harga*Hp3.Diskon)
+
+    val Hp4=Hp()
+    Hp4.Nama="Galaxy A21s"
+    Hp4.Harga=2_939_000
+    Hp4.Diskon= 0.10
+    Hp4.Total=Hp4.Harga-(Hp4.Harga*Hp4.Diskon)
+
+        println("Daftar Barang")
+    println("1. ${Hp1.Nama} Rp.${Hp1.Harga} (dic 20%)")
+    println("2. ${Hp2.Nama} Rp.${Hp2.Harga} (dic 10%)")
+    println("3. ${Hp3.Nama} Rp.${Hp3.Harga} (dic 15%)")
+    println("4. ${Hp4.Nama} Rp.${Hp4.Harga} (dic 10%)")
+
+println("Pilih Barang : ")
+    val barang = readLine()!!.toInt()
+
+    if (barang== 1){
+        println("---------- Nota Belanja ----------")
+        println("${Hp1.Nama} Rp.${Hp1.Harga} (dic 20%)")
+        println("Total Bayar ${Hp1.Total}")
+    }
+    else if (barang==2){
+        println("---------- Nota Belanja ----------")
+        println("${Hp2.Nama} Rp.${Hp2.Harga} (dic 10%)")
+        println("Total Bayar = ${Hp2.Total}")
+
+    }
+    else if (barang==3) {
+        println("---------- Nota Belanja ----------")
+        println("${Hp3.Nama} Rp.${Hp3.Harga} (dic 15%)")
+        println("Total Bayar = ${Hp3.Total}")
+    }
+    else if (barang==4) {
+        println("---------- Nota Belanja ----------")
+        println("${Hp4.Nama} Rp.${Hp4.Harga} (dic 10%)")
+        println("Total Bayar = ${Hp4.Total}")
+
+    }
+    else{
+        println("---------- Nota Belanja ----------")
+        println("Anda Salah Memasukan Nomor Barang")
+    }
+}
